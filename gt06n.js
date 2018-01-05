@@ -1,4 +1,7 @@
 module.exports.gt06 = (function(){
+    function vicp(params) {
+        console.log(params);
+    }
     const eventTypes = {
         '01' : 'Login Message',
         '12' : 'Location Data',
