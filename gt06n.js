@@ -168,7 +168,7 @@ module.exports.gt06 = (function(){
     };
     const parse = (data) => {
         let response;
-        console.log(dato);
+        console.log(data);
         // switch (selectEvent(data)){
         //     case '01':
         //         response = parseLogin(data);
