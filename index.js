@@ -173,19 +173,23 @@ const parse = (data) => {
     switch (selectEvent(data)) {
         case '01':
             response = parseLogin(data);
+            console.log(response);
             break;
         case '12':
             response = parseLocation(data);
+            console.log(response);
             break;
 
         case '13':
             response = parseStatus(data);
+            console.log(response);
             break;
         case '15':
             //parseLocation(data);
             break;
         case '16':
             response = parseAlarm(data);
+            console.log(response);
             break;
         case '1A':
             //parseLocation(data);
