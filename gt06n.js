@@ -1,7 +1,4 @@
 module.exports.gt06 = (function(){
-    function vicp(params) {
-        console.log(params);
-    }
     const eventTypes = {
         '01' : 'Login Message',
         '12' : 'Location Data',
@@ -170,37 +167,36 @@ module.exports.gt06 = (function(){
 
     };
     const parse = (data) => {
-        let response;
-        console.log(data);
-        // switch (selectEvent(data)){
-        //     case '01':
-        //         response = parseLogin(data);
-        //         break;
-        //     case '12':
-        //         response = parseLocation(data);
-        //         break;
+        let response;        
+        switch (selectEvent(data)){
+            case '01':
+                response = parseLogin(data);
+                break;
+            case '12':
+                response = parseLocation(data);
+                break;
 
-        //     case '13':
-        //         response = parseStatus(data);
-        //         break;
-        //     case '15':
-        //         //parseLocation(data);
-        //         break;
-        //     case '16':
-        //         response = parseAlarm(data);
-        //         break;
-        //     case '1A':
-        //         //parseLocation(data);
-        //         break;
-        //     case '80':
-        //         //parseLocation(data);
-        //         break;
-        // }
-        // return {
-        //     'data_packet': data,
-        //     'event': selectEvent(data),
-        //     'parsed': response
-        // };
+            case '13':
+                response = parseStatus(data);
+                break;
+            case '15':
+                //parseLocation(data);
+                break;
+            case '16':
+                response = parseAlarm(data);
+                break;
+            case '1A':
+                //parseLocation(data);
+                break;
+            case '80':
+                //parseLocation(data);
+                break;
+        }
+        return {
+            'data_packet': data,
+            'event': selectEvent(data),
+            'parsed': response
+        };
     };
 
     const selectEvent = (data) => {

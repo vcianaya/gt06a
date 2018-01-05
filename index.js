@@ -169,6 +169,7 @@ const parseStatus = (data) => {
 };
 const parse = (data) => {
     let response;
+    console.log(data);
     switch (selectEvent(data)) {
         case '01':
             response = parseLogin(data);
