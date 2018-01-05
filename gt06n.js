@@ -168,35 +168,36 @@ module.exports.gt06 = (function(){
     };
     const parse = (data) => {
         let response;
-        switch (selectEvent(data)){
-            case '01':
-                response = parseLogin(data);
-                break;
-            case '12':
-                response = parseLocation(data);
-                break;
+        console.log(dato);
+        // switch (selectEvent(data)){
+        //     case '01':
+        //         response = parseLogin(data);
+        //         break;
+        //     case '12':
+        //         response = parseLocation(data);
+        //         break;
 
-            case '13':
-                response = parseStatus(data);
-                break;
-            case '15':
-                //parseLocation(data);
-                break;
-            case '16':
-                response = parseAlarm(data);
-                break;
-            case '1A':
-                //parseLocation(data);
-                break;
-            case '80':
-                //parseLocation(data);
-                break;
-        }
-        return {
-            'data_packet': data,
-            'event': selectEvent(data),
-            'parsed': response
-        };
+        //     case '13':
+        //         response = parseStatus(data);
+        //         break;
+        //     case '15':
+        //         //parseLocation(data);
+        //         break;
+        //     case '16':
+        //         response = parseAlarm(data);
+        //         break;
+        //     case '1A':
+        //         //parseLocation(data);
+        //         break;
+        //     case '80':
+        //         //parseLocation(data);
+        //         break;
+        // }
+        // return {
+        //     'data_packet': data,
+        //     'event': selectEvent(data),
+        //     'parsed': response
+        // };
     };
 
     const selectEvent = (data) => {
