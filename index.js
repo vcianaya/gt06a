@@ -172,7 +172,7 @@ const parse = (data) => {
     console.log(data);
     switch (selectEvent(data)) {
         case '01':
-            // response = parseLogin(data);
+            response = parseLogin(data);
             console.log(data);
             break;
         case '12':
