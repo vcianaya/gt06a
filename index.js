@@ -211,7 +211,7 @@ const selectEvent = (data) => {
 const server = net.createServer((connection) => {
     connection.setEncoding('hex');
     connection.on('data', (data) => {
-        console.log(selectEvent(data));
+        console.log(selectEvent(data)+'<--->'+data);
         // let result = parse(data);        
     });
 }).listen(5000);
